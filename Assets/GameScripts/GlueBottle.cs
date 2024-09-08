@@ -20,7 +20,7 @@ public class GlueBottle : MonoBehaviour
 
 public class GlueBottle : MonoBehaviour
 {
-    public float stunDuration = 5f; // Duration of the health glue in seconds
+    public float stunDuration = 5f; // duration of the health glue in seconds
 
     private void OnTriggerEnter(Collider other)
     {
@@ -41,6 +41,8 @@ public class GlueBottle : MonoBehaviour
     private IEnumerator RestartStuffingEffectAfterDelay(StuffingEffects stuffingEffects, float delay)
     {
         yield return new WaitForSeconds(delay);
+        
+        Debug.Log("glue ran out-health gonna drain again");
         stuffingEffects.HandleStuffingEffects(); // start health drain again after glue finishes
     }
 }

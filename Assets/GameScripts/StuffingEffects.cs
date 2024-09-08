@@ -24,8 +24,8 @@ public class StuffingEffects : MonoBehaviour
 
     private IEnumerator StuffingDamage()
     {
-        float amount = 2f;
-        float interval = 1f;
+        float amount = 2f; //amount of health that drains
+        float interval = 1f; //health drains every interval
 
         while (playerStats.GetCurrentHealth() > 0)
         {
