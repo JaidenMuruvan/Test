@@ -19,6 +19,7 @@ public class StuffingEffects : MonoBehaviour
         if (stuffingDamageCoroutine == null)
         {
             stuffingDamageCoroutine = StartCoroutine(StuffingDamage());
+            Debug.Log("health start draiining");
         }
     }
 
@@ -43,8 +44,10 @@ public class StuffingEffects : MonoBehaviour
             StopCoroutine(stuffingDamageCoroutine);
             stuffingDamageCoroutine = null;
             StartCoroutine(Stop());
-            Debug.Log("Stuffing effect stopped");
+            Debug.Log("Health is not draining anymore --player not losing Stuffing");
         }
+
+        StartCoroutine(Stop());
     }
 
     IEnumerator Stop()

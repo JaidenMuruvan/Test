@@ -20,7 +20,7 @@ public class GlueBottle : MonoBehaviour
 
 public class GlueBottle : MonoBehaviour
 {
-    public float stunDuration = 5f; // duration of the health glue in seconds
+    public float stunDuration = 2f; // duration of the health glue in seconds
 
     private void OnTriggerEnter(Collider other)
     {
